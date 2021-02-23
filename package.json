@@ -1,0 +1,12 @@
+{
+  "name": "mini-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "sass --watch src/sass:dist/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
