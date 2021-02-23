@@ -98,6 +98,9 @@ ul {
 .products_list .products:first-child {
   margin-top: 0;
 }
+.products_list .products.off {
+  display: none;
+}
 .products_list img {
   width: auto;
   height: 40px;

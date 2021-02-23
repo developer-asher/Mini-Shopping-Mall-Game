@@ -110,6 +110,9 @@ ul {
   .products:first-child {
     margin-top: 0;
   }
+  .products.off {
+    display: none;
+  }
 
   img {
     width: auto;
