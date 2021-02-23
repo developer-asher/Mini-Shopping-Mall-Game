@@ -1,12 +1,14 @@
 'use strict';
 
-function sortShape() {
+const btnSorts = document.querySelectorAll('.sort');
+
+function sortProducts(btn, type) {
     const productLists = document.querySelector('.products_list'),
         products = document.querySelectorAll('.products'),
-        sortTypeName = this.getAttribute('data-shape');
+        sortTypeName = btn.getAttribute(`data-${type}`);
 
     products.forEach((product) => {
-        const productType = product.querySelector('img').getAttribute('data-shape');
+        const productType = product.querySelector('img').getAttribute(`data-${type}`);
 
         if(productType === sortTypeName) {
             productLists.appendChild(product);
@@ -17,41 +19,21 @@ function sortShape() {
     });
 }
 
-function sortColor() {
-    const productLists = document.querySelector('.products_list'),
-        products = document.querySelectorAll('.products'),
-        sortTypeName = this.getAttribute('data-color');
+function clickButton(ele) {
+    ele.addEventListener('click', () => {
+        const btnClass = ele.getAttribute('class');
+        const btnClassName = btnClass.split(' ');
 
-    products.forEach((product) => {
-        const productType = product.querySelector('img').getAttribute('data-color');
-
-        if(productType === sortTypeName) {
-            productLists.appendChild(product);
-            product.classList.remove('off');
+        if(btnClassName.includes('shape')) {
+            sortProducts(ele, 'shape');
         } else {
-            product.classList.add('off');
+            sortProducts(ele, 'color');
         }
     });
-}
-
-function clickSortButton(sortType, cate) {
-    const btnSort = document.querySelector(`${sortType}`);
-    
-    if(cate === 'shape') {
-        btnSort.addEventListener('click', sortShape);
-    } else if(cate === 'color'){
-        btnSort.addEventListener('click', sortColor);
-    }
-    
 }
 
 function init(){
-    clickSortButton('.sort_shirt', 'shape');
-    clickSortButton('.sort_pants', 'shape');
-    clickSortButton('.sort_skirt', 'shape');
-    clickSortButton('.sort_blue', 'color');
-    clickSortButton('.sort_yellow', 'color');
-    clickSortButton('.sort_pink', 'color');
+    btnSorts.forEach((sort) => clickButton(sort));
 };
 
 init();
