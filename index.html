@@ -1,79 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Shopping Mall</title>
-    <link rel="stylesheet" href="dist/css/common.css">
-    <script src="dist/js/common.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/common.css" />
+    <script src="dist/js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Logo -->
+    <img class="logo" src="imgs/logo.png" alt="logo" />
 
-<div class='container'>
-    <h1 class="logo">
-        <a href="#"><img src="imgs/logo.png" alt="online shopping mall"></a>
-    </h1>
-    <section class="sort_wrapper">
-        <ul class="sort_list">
-            <li>
-                <button class='sort_shirt' data-shape='t-shirt'><img src="imgs/blue_t.png" alt="t-shirt"></button>
-            </li>
-            <li>
-                <button class='sort_pants' data-shape='pants'><img src="imgs/blue_p.png" alt="pants"></button>
-            </li>
-            <li>
-                <button class='sort_skirt' data-shape='skirt'><img src="imgs/blue_s.png" alt="skirt"></button>
-            </li>
-            <li>
-                <button class='sort_blue bg_blue' data-color='blue'><span>Blue</span></button>
-            </li>
-            <li>
-                <button class='sort_yellow bg_yellow' data-color='yellow'><span>Yellow</span></button>
-            </li>
-            <li>
-                <button class='sort_pink bg_pink' data-color='pink'><span>Pink</span></button>
-            </li>
-        </ul>
-    </section>
-    <section class="products_list">
-        <div class="products">
-            <img data-shape='pants' data-color='blue' src="imgs/blue_p.png" alt="pants"><span>man, small size</span>
-        </div>
-        <div class="products">
-            <img data-shape='skirt' data-color='blue' src="imgs/blue_s.png" alt="skirt"><span>female, small size</span>
-        </div>
-        <div class="products">
-            <img data-shape='t-shirt' data-color='blue' src="imgs/blue_t.png" alt="t-shirt"><span>male, large size</span>
-        </div>
-        <div class="products">
-            <img data-shape='pants' data-color='yellow' src="imgs/yellow_p.png" alt="pants"><span>man, small size</span>
-        </div>
-        <div class="products">
-            <img data-shape='skirt' data-color='yellow' src="imgs/yellow_s.png" alt="skirt"><span>female, small size</span>
-        </div>
-        <div class="products">
-            <img data-shape='t-shirt' data-color='yellow' src="imgs/yellow_t.png" alt="t-shirt"><span>male, large size</span>
-        </div>
-        <div class="products">
-            <img data-shape='pants' data-color='pink' src="imgs/pink_p.png" alt="pants"><span>man, small size</span>
-        </div>
-        <div class="products">
-            <img data-shape='skirt' data-color='pink' src="imgs/pink_s.png" alt="skirt"><span>female, small size</span>
-        </div>
-        <div class="products">
-            <img data-shape='t-shirt' data-color='pink' src="imgs/pink_t.png" alt="t-shirt"><span>male, large size</span>
-        </div>
-        <div class="products">
-            <img data-shape='pants' data-color='blue' src="imgs/blue_p.png" alt="pants"><span>man2, small size</span>
-        </div>
-        <div class="products">
-            <img data-shape='skirt' data-color='blue' src="imgs/blue_s.png" alt="skirt"><span>female2, small size</span>
-        </div>
-        <div class="products">
-            <img data-shape='t-shirt' data-color='blue' src="imgs/blue_t.png" alt="t-shirt"><span>male2, large size</span>
-        </div>
-    </section>
-</div>
+    <!-- Button -->
+    <div class="buttons">
+      <button class="btn">
+        <img
+          src="imgs/blue_t.png"
+          alt="tshirt"
+          class="imgBtn"
+          data-key="type"
+          data-value="tshirt"
+        />
+      </button>
+      <button class="btn">
+        <img
+          src="imgs/blue_p.png"
+          alt="pants"
+          class="imgBtn"
+          data-key="type"
+          data-value="pants"
+        />
+      </button>
+      <button class="btn">
+        <img
+          src="imgs/blue_s.png"
+          alt="skirt"
+          class="imgBtn"
+          data-key="type"
+          data-value="skirt"
+        />
+      </button>
+      <button class="btn colorBtn blue" data-key="color" data-value="blue">
+        Blue
+      </button>
+      <button class="btn colorBtn yellow" data-key="color" data-value="yellow">
+        Yellow
+      </button>
+      <button class="btn colorBtn pink" data-key="color" data-value="pink">
+        Pink
+      </button>
+    </div>
 
-</body>
+    <!-- Items -->
+    <ul class="items"></ul>
+  </body>
 </html>
